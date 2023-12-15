@@ -73,7 +73,8 @@ button:active, button:focus {
         .portfolio-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
+            padding: 20px;
         }
 
         .portfolio-item {

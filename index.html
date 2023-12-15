@@ -5,55 +5,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAWR</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAWR</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </head>
+
 <body>
 
     <header>
         <img class="header-logo" src="assets/logo.svg" alt="bySawR">
-    </header>
-
-    <div class="portfolio-container">
         <div class="filter-buttons">
             <button onclick="filterProjects('thumbnails')">Thumbnails</button>
             <button onclick="filterProjects('branding')">Branding</button>
             <button onclick="filterProjects('animation')">Animation</button>
         </div>
+    </header>
+
+    <div class="portfolio-container">
 
         <div class="portfolio-item" data-tags="thumbnails">
-            <!-- Project content for Thumbnails -->
-            <img src="project-thumbnail1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
+            <img src="assets/thumbnails/01.jpg" alt="Thumbnail">
         </div>
-
-        <div class="portfolio-item" data-tags="branding">
-            <!-- Project content for Branding -->
-            <img src="project-thumbnail2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/02.jpg" alt="Thumbnail">
         </div>
-
-        <div class="portfolio-item" data-tags="animation">
-            <!-- Project content for Animation -->
-            <img src="project-thumbnail3.jpg" alt="Project 3">
-            <h3>Project 3</h3>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/03.jpg" alt="Thumbnail">
         </div>
-
-        <!-- Add more projects with appropriate data-tags -->
-
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/04.jpg" alt="Thumbnail">
+        </div>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/05.jpg" alt="Thumbnail">
+        </div>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/06.jpg" alt="Thumbnail">
+        </div>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/07.jpg" alt="Thumbnail">
+        </div>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/08.png" alt="Thumbnail">
+        </div>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/09.png" alt="Thumbnail">
+        </div>
+        <div class="portfolio-item" data-tags="thumbnails">
+            <img src="assets/thumbnails/10.png" alt="Thumbnail">
+        </div>
     </div>
 
-    <footer>
-        &copy; 2023 bySawR. All Rights Reserved.
-    </footer>
-
     <script>
+        function shuffle(array) {
+            let currentIndex = array.length,
+                randomIndex;
+
+            // While there remain elements to shuffle...
+            while (currentIndex !== 0) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+
         let activeFilter = ''; // No default active filter
 
         function filterProjects(tag) {
@@ -73,8 +98,17 @@
             activeFilter = activeFilter === tag ? '' : tag;
         }
 
-        // Initially show all projects
-        filterProjects('');
+        // Initially show all projects and shuffle the order
+        document.addEventListener('DOMContentLoaded', function () {
+            const portfolioContainer = document.querySelector('.portfolio-container');
+            const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+
+            shuffle(portfolioItems).forEach(item => {
+                portfolioContainer.appendChild(item);
+            });
+
+            filterProjects('');
+        });
     </script>
 
 </body>

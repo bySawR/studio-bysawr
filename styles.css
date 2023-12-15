@@ -48,7 +48,6 @@ button:active, button:focus {
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 20px;
             background-color: var(--primary-color);
             color: var(--text);
             box-sizing: border-box;

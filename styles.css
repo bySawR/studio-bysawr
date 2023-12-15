@@ -10,6 +10,22 @@
 .header-logo {
     height: 60px;
 }
+
+button {
+    padding: 24px;
+    min-width: 300px;
+    outline: 1px solid white;
+    font-size: 18px;
+    background-color: transparent;
+    color: inherit;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
         
         body {
             font-family: 'Poppins', sans-serif;

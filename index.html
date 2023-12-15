@@ -22,7 +22,6 @@
 
     <div class="portfolio-container">
         <div class="filter-buttons">
-            <button onclick="filterProjects('all')">All</button>
             <button onclick="filterProjects('thumbnails')">Thumbnails</button>
             <button onclick="filterProjects('branding')">Branding</button>
             <button onclick="filterProjects('animation')">Animation</button>
@@ -55,19 +54,27 @@
     </footer>
 
     <script>
+        let activeFilter = ''; // No default active filter
+
         function filterProjects(tag) {
             const items = document.querySelectorAll('.portfolio-item');
 
             items.forEach(item => {
                 const tags = item.getAttribute('data-tags').split(',');
 
-                if (tags.includes(tag) || tag === 'all') {
+                if (activeFilter === tag || tags.includes(tag) || activeFilter === '') {
                     item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
                 }
             });
+
+            // Update the active filter
+            activeFilter = activeFilter === tag ? '' : tag;
         }
+
+        // Initially show all projects
+        filterProjects('');
     </script>
 
 </body>

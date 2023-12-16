@@ -64,6 +64,7 @@ button:active, button:focus {
             position: fixed;
             display: flex;
             padding: 20px;
+            width: 250px;
             justify-content: space-around;
             background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
@@ -78,7 +79,7 @@ button:active, button:focus {
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            margin-left: 200px;
+            margin-left: 270px;
         }
 
         .portfolio-item {

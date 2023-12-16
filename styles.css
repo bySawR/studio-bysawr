@@ -19,6 +19,16 @@
     object-fit: cover;
 }
 
+h2 {
+    font-weight: 600;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 button {
     padding: 20px;
     min-width: 150px;
@@ -70,7 +80,7 @@ button:focus {
             box-sizing: border-box;
         }
 
-        header {
+        .header {
             background-color: var(--primary-color);
             color: #fff;
             position: fixed;
@@ -82,7 +92,12 @@ button:focus {
             background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
             flex-direction: column;
-            height: 100vh;
+            height: 95%;
+        }
+
+        .header-wrapper {
+            display: flex;
+            overflow-y: hidden;
         }
 
 
@@ -114,4 +129,27 @@ button:focus {
             font-weight: 400;
             margin: 0;
             font-size: 18px;
+        }
+
+        .contact-wrapper {
+            width: 100%;
+        }
+
+        .contact-wrapper a {
+            display: flex;
+            color: inherit;
+            padding: 20px;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            min-width: 150px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+            border-radius: 20px;
+        }
+
+        .contact-wrapper a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            
         }

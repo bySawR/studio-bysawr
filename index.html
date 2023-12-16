@@ -21,9 +21,10 @@
         <div class="logo-wrapper">
         <img class="header-logo" src="assets/logo.svg" alt="bySawR"><h2>bySawR</h2></div>
         <div class="filter-buttons">
-            <button onclick="filterProjects('thumbnails')"><iconify-icon icon="mynaui:image" width="36" height="36"></iconify-icon>Thumbnails</button>
-            <button onclick="filterProjects('branding')"><iconify-icon icon="mynaui:pen" style="color: white;" width="36"></iconify-icon>Branding</button>
-            <button onclick="filterProjects('animation')"><iconify-icon icon="mynaui:video" style="color: white;" width="36"></iconify-icon>Animation</button>
+            <button onclick="filterProjects('thumbnails', this)"><iconify-icon icon="mynaui:image" width="36" height="36"></iconify-icon>Thumbnails</button>
+<button onclick="filterProjects('branding', this)"><iconify-icon icon="mynaui:pen" style="color: white;" width="36"></iconify-icon>Branding</button>
+<button onclick="filterProjects('animation', this)"><iconify-icon icon="mynaui:video" style="color: white;" width="36"></iconify-icon>Animation</button>
+
         </div>
         <div class="contact-wrapper">
             <a href="https://twitter.com/bySawR" target="_blank"><iconify-icon icon="mynaui:arrow-right" style="color: white;" width="36"></iconify-icon>Contact</a>
@@ -83,23 +84,29 @@
 
         let activeFilter = ''; // No default active filter
 
-        function filterProjects(tag) {
-            const items = document.querySelectorAll('.portfolio-item');
+        function filterProjects(tag, button) {
+    const items = document.querySelectorAll('.portfolio-item');
+    const buttons = document.querySelectorAll('.filter-buttons button');
 
-            items.forEach(item => {
-                const tags = item.getAttribute('data-tags').split(',');
+    buttons.forEach(btn => {
+        btn.classList.remove('button-active');
+    });
 
-                if (activeFilter === tag || tags.includes(tag) || tag === '') {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+    button.classList.add('button-active');
 
-            // Update the active filter
-            activeFilter = activeFilter === tag ? '' : tag;
+    items.forEach(item => {
+        const tags = item.getAttribute('data-tags').split(',');
+
+        if (activeFilter === tag || tags.includes(tag) || tag === '') {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
         }
+    });
 
+    // Update the active filter
+    activeFilter = activeFilter === tag ? '' : tag;
+}
         // Initially show all projects and shuffle the order
         document.addEventListener('DOMContentLoaded', function () {
             const portfolioContainer = document.querySelector('.portfolio-container');

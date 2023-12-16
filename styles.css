@@ -9,7 +9,9 @@
 
 .header-logo {
     height: 60px;
+    padding: 20px;
 }
+
 
 .portfolio-item img {
     width: 100%;
@@ -18,23 +20,33 @@
 }
 
 button {
-    padding: 24px;
+    padding: 20px;
     min-width: 150px;
-    outline: 1px solid white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    outline: 0px solid white;
     font-size: 18px;
     border: none;
     background-color: transparent;
     font-weight: 500;
     border-radius: 20px;
     color: white;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
+
 button:active, button:focus {
-    background-color: rgba(255, 255, 255, 0.3);
+    outline: 2px solid white;
+}
+
+button:focus {
     outline: 2px solid white;
 }
 
@@ -46,7 +58,7 @@ button:active, button:focus {
 .filter-buttons {
     display: flex;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
     flex-direction: column;
 }
         
@@ -63,13 +75,13 @@ button:active, button:focus {
             color: #fff;
             position: fixed;
             display: flex;
+            align-items: flex-start;
             padding: 20px;
             width: 250px;
-            justify-content: space-around;
+            justify-content: space-between;
             background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
             flex-direction: column;
-            align-items: center;
             height: 100vh;
         }
 
@@ -79,7 +91,7 @@ button:active, button:focus {
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
-            margin-left: 270px;
+            margin-left: 300px;
         }
 
         .portfolio-item {

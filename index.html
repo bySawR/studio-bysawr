@@ -88,11 +88,16 @@
     const items = document.querySelectorAll('.portfolio-item');
     const buttons = document.querySelectorAll('.filter-buttons button');
 
+    // Check if the clicked button is already active
+    const isActive = button.classList.contains('button-active');
+
     buttons.forEach(btn => {
         btn.classList.remove('button-active');
     });
 
-    button.classList.add('button-active');
+    if (!isActive) {
+        button.classList.add('button-active');
+    }
 
     items.forEach(item => {
         const tags = item.getAttribute('data-tags').split(',');
@@ -104,8 +109,8 @@
         }
     });
 
-    // Update the active filter
-    activeFilter = activeFilter === tag ? '' : tag;
+    // Update the active filter only if the button is not already active
+    activeFilter = isActive ? '' : tag;
 }
         // Initially show all projects and shuffle the order
         document.addEventListener('DOMContentLoaded', function () {

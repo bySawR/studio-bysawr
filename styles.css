@@ -12,6 +12,10 @@
     padding: 20px;
 }
 
+img {
+    border-radius: 10px;
+}
+
 
 .portfolio-item img {
     width: 100%;

@@ -173,11 +173,26 @@ button:hover {
     object-fit: cover;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 
 @media screen and (max-width: 768px) {
 
-    .filter-buttons {
-    display: none;
+.filter-buttons {
+    flex-direction: row;
+    width: unset;
+}
+
+    .filter-buttons p {
+display: none;
+}
+
+button {
+    min-width: unset;
+    width: unset;
 }
 
 .header-wrapper {
@@ -186,13 +201,23 @@ button:hover {
 }
 .header {
     position: unset;
-    padding: unset;
+    padding: 0px 20px;
     gap: 100px;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: unset;
     flex-direction: row;
-    height: unset
 }
+
+.sidenav-heading {
+    display: none;
+}
+
+.contact-wrapper {
+    display: none;
+}
+
 .logo-wrapper h2 {
     display: none;
 }

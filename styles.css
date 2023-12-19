@@ -179,14 +179,17 @@ button:hover {
     .filter-buttons {
     display: none;
 }
+
+.header-wrapper {
+    width: 100%;
+    justify-content: center;
+}
 .header {
     position: unset;
     padding: unset;
     gap: 100px;
     width: 100%;
-    justify-content: flex-start;
-    background: rgb(39 39 39 / 50%);
-    backdrop-filter: blur(35px);
+    justify-content: center;
     flex-direction: row;
     height: unset
 }
@@ -201,5 +204,8 @@ button:hover {
 }
 .portfolio-item {
     width: 100%;
+}
+button#text {
+    display: none;
 }
 }

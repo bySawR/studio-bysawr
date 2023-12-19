@@ -172,3 +172,34 @@ button:hover {
     height: 100%;
     object-fit: cover;
 }
+
+
+@media screen and (max-width: 768px) {
+
+    .filter-buttons {
+    display: none;
+}
+.header {
+    position: unset;
+    padding: unset;
+    gap: 100px;
+    width: 100%;
+    justify-content: flex-start;
+    background: rgb(39 39 39 / 50%);
+    backdrop-filter: blur(35px);
+    flex-direction: row;
+    height: unset
+}
+.logo-wrapper h2 {
+    display: none;
+}
+.portfolio-container {
+    margin-left: 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+.portfolio-item {
+    width: 100%;
+}
+}

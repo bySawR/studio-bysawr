@@ -16,6 +16,12 @@ img {
     border-radius: 10px;
 }
 
+.sidenav-heading {
+    padding-left: 20px;
+    padding-top: 20px;
+    opacity: 0.3;
+}
+
 
 .portfolio-item img {
     width: 100%;
@@ -68,7 +74,7 @@ button:hover {
 .filter-buttons {
     display: flex;
     width: 100%;
-    gap: 20px;
+    gap: 10px;
     flex-direction: column;
 }
         
@@ -87,8 +93,9 @@ button:hover {
             display: flex;
             align-items: flex-start;
             padding: 20px;
+            gap: 100px;
             width: 250px;
-            justify-content: space-between;
+            justify-content: flex-start;
             background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
             flex-direction: column;
@@ -133,11 +140,15 @@ button:hover {
 
         .contact-wrapper {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .contact-wrapper a {
             display: flex;
             color: inherit;
+            gap: 20px;
             padding: 20px;
             flex-direction: row;
             align-items: center;

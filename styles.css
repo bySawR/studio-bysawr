@@ -94,9 +94,8 @@ button:hover {
             display: flex;
             align-items: flex-start;
             padding: 20px;
-            gap: 20px;
             width: 250px;
-            justify-content: flex-start;
+            justify-content: space-between;
             background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
             flex-direction: column;

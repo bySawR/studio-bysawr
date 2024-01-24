@@ -24,6 +24,7 @@ img {
     padding-left: 15px;
     padding-top: 15px;
     opacity: 0.3;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 
@@ -114,6 +115,7 @@ button:hover {
         .date-rr {
             PADDING: 15px;
             opacity: 0.4;
+            font-size: 13px;
         }
 
         .header-wrapper {

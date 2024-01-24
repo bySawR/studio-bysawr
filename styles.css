@@ -7,9 +7,13 @@
     --item-hover: #F0F0F0;
 }
 
+* {
+    font-family: Poppins;
+}
+
 .header-logo {
-    height: 60px;
-    padding: 20px;
+    height: 40px;
+    padding: 15px;
 }
 
 img {
@@ -17,8 +21,8 @@ img {
 }
 
 .sidenav-heading {
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
     opacity: 0.3;
     letter-spacing: 1px;
 }
@@ -32,6 +36,7 @@ img {
 
 h2 {
     font-weight: 600;
+    font-size: 20px;
 }
 
 .logo-wrapper {
@@ -41,13 +46,13 @@ h2 {
 }
 
 button {
-    padding: 20px;
+    padding: 15px;
     min-width: 150px;
     display: flex;
     align-items: center;
     gap: 10px;
     outline: 0px solid white;
-    font-size: 18px;
+    font-size: 15px;
     border: none;
     background-color: transparent;
     font-weight: 500;
@@ -55,6 +60,10 @@ button {
     color: white;
     text-align: left;
     transition: background-color 0.3s ease-in-out;
+}
+
+p {
+    font-size: 15px;
 }
 
 button:hover {
@@ -78,6 +87,7 @@ button:hover {
     gap: 10px;
     flex-direction: column;
 }
+
         
         body {
             font-family: 'Poppins', sans-serif;
@@ -88,32 +98,37 @@ button:hover {
         }
 
         .header {
-            background-color: var(--primary-color);
             color: #fff;
             position: fixed;
             display: flex;
             align-items: flex-start;
-            padding: 20px;
-            width: 250px;
-            justify-content: space-between;
+            padding: 15px;
             background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
             flex-direction: column;
-            height: 95%;
+            width: 200px;
+            height: -webkit-fill-available;
+            justify-content: space-between;
+        }
+
+        .date-rr {
+            PADDING: 15px;
+            opacity: 0.4;
         }
 
         .header-wrapper {
             display: flex;
             overflow-y: hidden;
+            height: 100%;
         }
 
 
         .portfolio-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-            margin-left: 300px;
+            gap: 15px;
+            padding: 15px;
+            margin-left: 235px;
         }
 
         .portfolio-item {
@@ -148,16 +163,17 @@ button:hover {
         .contact-wrapper a {
             display: flex;
             color: inherit;
-            gap: 20px;
-            padding: 20px;
+            gap: 10px;
+            font-size: 15px;
+            padding: 15px;
             flex-direction: row;
             align-items: center;
-            gap: 10px;
             min-width: 150px;
             text-decoration: none;
             transition: background-color 0.3s ease-in-out;
             border-radius: 20px;
         }
+
 
         .contact-wrapper a:hover {
             background-color: rgba(255, 255, 255, 0.3);

@@ -57,7 +57,7 @@ button {
     border: none;
     background-color: transparent;
     font-weight: 500;
-    border-radius: 20px;
+    border-radius: 8px;
     color: white;
     text-align: left;
     transition: background-color 0.3s ease-in-out;
@@ -68,13 +68,14 @@ p {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.067);
     cursor: pointer;
 }
 
 
 .button-active {
-    outline: 2px solid white;
+    outline: 1px solid rgba(255, 255, 255, 0.413);
+    background-color: rgba(255, 255, 255, 0.067);
 }
 
 .portfolio-item iframe {
@@ -168,17 +169,17 @@ button:hover {
             gap: 10px;
             font-size: 15px;
             padding: 15px;
+            border-radius: 8px;
             flex-direction: row;
             align-items: center;
             min-width: 150px;
             text-decoration: none;
             transition: background-color 0.3s ease-in-out;
-            border-radius: 20px;
         }
 
 
         .contact-wrapper a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.067);
             cursor: pointer;
             
         }

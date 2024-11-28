@@ -105,7 +105,6 @@ button:hover {
             display: flex;
             align-items: flex-start;
             padding: 15px;
-            background: rgb(39 39 39 / 50%);
             backdrop-filter: blur(35px);
             flex-direction: column;
             width: 200px;
